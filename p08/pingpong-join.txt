@@ -1,0 +1,61 @@
+Main INICIO
+Main 0
+    Pang 0
+        Peng 0
+            Ping 0
+                Pong 0
+                    Pung 0
+Main 1
+    Pang 1
+        Peng 1
+            Ping 1
+                Pong 1
+                    Pung 1
+Main espera Pang...
+    Pang 2
+        Peng 2
+            Ping 2
+                Pong 2
+                    Pung 2
+    Pang FIM
+Task 2 exit: 1123 ms run time, 198 ms CPU time, 19 activations
+        Peng 3
+            Ping 3
+                Pong 3
+                    Pung 3
+Pang encerrou com exit code 3
+Main espera Peng...
+        Peng 4
+            Ping 4
+                Pong 4
+                    Pung 4
+        Peng FIM
+Task 3 exit: 1651 ms run time, 330 ms CPU time, 31 activations
+            Ping 5
+                Pong 5
+                    Pung 5
+Peng encerrou com exit code 5
+Main espera Ping...
+            Ping 6
+                Pong 6
+                    Pung 6
+            Ping FIM
+Task 4 exit: 2048 ms run time, 463 ms CPU time, 43 activations
+                Pong 7
+                    Pung 7
+Ping encerrou com exit code 7
+Main espera Pong...
+                Pong 8
+                    Pung 8
+                Pong FIM
+Task 5 exit: 2314 ms run time, 595 ms CPU time, 55 activations
+                    Pung 9
+Pong encerrou com exit code 9
+Main espera Pung...
+                    Pung 10
+                    Pung FIM
+Task 6 exit: 2447 ms run time, 726 ms CPU time, 67 activations
+Pung encerrou com exit code 11
+Main FIM
+Task 0 exit: 2447 ms run time, 132 ms CPU time, 18 activations
+Task 1 exit: 2447 ms run time, 1 ms CPU time, 233 activations

@@ -1,0 +1,1589 @@
+Main INICIO
+Disco contem 256 blocos de 64 bytes cada
+T3 will move 8 blocks between 0 and 255
+T03 will read block 0
+T4 will move 8 blocks between 8 and 247
+T04 will read block 8
+T5 will move 8 blocks between 16 and 239
+T05 will read block 16
+T6 will move 8 blocks between 24 and 231
+T06 will read block 24
+T7 will move 8 blocks between 32 and 223
+T07 will read block 32
+T8 will move 8 blocks between 40 and 215
+T08 will read block 40
+T9 will move 8 blocks between 48 and 207
+T09 will read block 48
+T10 will move 8 blocks between 56 and 199
+T10 will read block 56
+T11 will move 8 blocks between 64 and 191
+T11 will read block 64
+T12 will move 8 blocks between 72 and 183
+T12 will read block 72
+T13 will move 8 blocks between 80 and 175
+T13 will read block 80
+T14 will move 8 blocks between 88 and 167
+T14 will read block 88
+T15 will move 8 blocks between 96 and 159
+T15 will read block 96
+T16 will move 8 blocks between 104 and 151
+T16 will read block 104
+T17 will move 8 blocks between 112 and 143
+T17 will read block 112
+T18 will move 8 blocks between 120 and 135
+T18 will read block 120
+T03 read  block 0
+T03 will read block 255
+T04 read  block 8
+T04 will read block 247
+T05 read  block 16
+T05 will read block 239
+T06 read  block 24
+T06 will read block 231
+T07 read  block 32
+T07 will read block 223
+T08 read  block 40
+T08 will read block 215
+T09 read  block 48
+T09 will read block 207
+T10 read  block 56
+T10 will read block 199
+T11 read  block 64
+T11 will read block 191
+T12 read  block 72
+T12 will read block 183
+T13 read  block 80
+T13 will read block 175
+T14 read  block 88
+T14 will read block 167
+T15 read  block 96
+T15 will read block 159
+T16 read  block 104
+T16 will read block 151
+T17 read  block 112
+T17 will read block 143
+T18 read  block 120
+T18 will read block 135
+T03 read  block 255
+T03 block 0 contents: [<--bloco 0000------------------------------------------------->
+]
+T03 block 255 contents: [<--bloco 0255------------------------------------------------->
+]
+T03 will write block 255
+T04 read  block 247
+T04 block 8 contents: [<--bloco 0008------------------------------------------------->
+]
+T04 block 247 contents: [<--bloco 0247------------------------------------------------->
+]
+T04 will write block 247
+T05 read  block 239
+T05 block 16 contents: [<--bloco 0016------------------------------------------------->
+]
+T05 block 239 contents: [<--bloco 0239------------------------------------------------->
+]
+T05 will write block 239
+T06 read  block 231
+T06 block 24 contents: [<--bloco 0024------------------------------------------------->
+]
+T06 block 231 contents: [<--bloco 0231------------------------------------------------->
+]
+T06 will write block 231
+T07 read  block 223
+T07 block 32 contents: [<--bloco 0032------------------------------------------------->
+]
+T07 block 223 contents: [<--bloco 0223------------------------------------------------->
+]
+T07 will write block 223
+T08 read  block 215
+T08 block 40 contents: [<--bloco 0040------------------------------------------------->
+]
+T08 block 215 contents: [<--bloco 0215------------------------------------------------->
+]
+T08 will write block 215
+T09 read  block 207
+T09 block 48 contents: [<--bloco 0048------------------------------------------------->
+]
+T09 block 207 contents: [<--bloco 0207------------------------------------------------->
+]
+T09 will write block 207
+T10 read  block 199
+T10 block 56 contents: [<--bloco 0056------------------------------------------------->
+]
+T10 block 199 contents: [<--bloco 0199------------------------------------------------->
+]
+T10 will write block 199
+T11 read  block 191
+T11 block 64 contents: [<--bloco 0064------------------------------------------------->
+]
+T11 block 191 contents: [<--bloco 0191------------------------------------------------->
+]
+T11 will write block 191
+T12 read  block 183
+T12 block 72 contents: [<--bloco 0072------------------------------------------------->
+]
+T12 block 183 contents: [<--bloco 0183------------------------------------------------->
+]
+T12 will write block 183
+T13 read  block 175
+T13 block 80 contents: [<--bloco 0080------------------------------------------------->
+]
+T13 block 175 contents: [<--bloco 0175------------------------------------------------->
+]
+T13 will write block 175
+T14 read  block 167
+T14 block 88 contents: [<--bloco 0088------------------------------------------------->
+]
+T14 block 167 contents: [<--bloco 0167------------------------------------------------->
+]
+T14 will write block 167
+T15 read  block 159
+T15 block 96 contents: [<--bloco 0096------------------------------------------------->
+]
+T15 block 159 contents: [<--bloco 0159------------------------------------------------->
+]
+T15 will write block 159
+T16 read  block 151
+T16 block 104 contents: [<--bloco 0104------------------------------------------------->
+]
+T16 block 151 contents: [<--bloco 0151------------------------------------------------->
+]
+T16 will write block 151
+T17 read  block 143
+T17 block 112 contents: [<--bloco 0112------------------------------------------------->
+]
+T17 block 143 contents: [<--bloco 0143------------------------------------------------->
+]
+T17 will write block 143
+T18 read  block 135
+T18 block 120 contents: [<--bloco 0120------------------------------------------------->
+]
+T18 block 135 contents: [<--bloco 0135------------------------------------------------->
+]
+T18 will write block 135
+T03 wrote block 255
+T03 will write block 0
+T04 wrote block 247
+T04 will write block 8
+T05 wrote block 239
+T05 will write block 16
+T06 wrote block 231
+T06 will write block 24
+T07 wrote block 223
+T07 will write block 32
+T08 wrote block 215
+T08 will write block 40
+T09 wrote block 207
+T09 will write block 48
+T10 wrote block 199
+T10 will write block 56
+T11 wrote block 191
+T11 will write block 64
+T12 wrote block 183
+T12 will write block 72
+T13 wrote block 175
+T13 will write block 80
+T14 wrote block 167
+T14 will write block 88
+T15 wrote block 159
+T15 will write block 96
+T16 wrote block 151
+T16 will write block 104
+T17 wrote block 143
+T17 will write block 112
+T18 wrote block 135
+T18 will write block 120
+T03 wrote block 0
+T03 will read block 1
+T04 wrote block 8
+T04 will read block 9
+T05 wrote block 16
+T05 will read block 17
+T06 wrote block 24
+T06 will read block 25
+T07 wrote block 32
+T07 will read block 33
+T08 wrote block 40
+T08 will read block 41
+T09 wrote block 48
+T09 will read block 49
+T10 wrote block 56
+T10 will read block 57
+T11 wrote block 64
+T11 will read block 65
+T12 wrote block 72
+T12 will read block 73
+T13 wrote block 80
+T13 will read block 81
+T14 wrote block 88
+T14 will read block 89
+T15 wrote block 96
+T15 will read block 97
+T16 wrote block 104
+T16 will read block 105
+T17 wrote block 112
+T17 will read block 113
+T18 wrote block 120
+T18 will read block 121
+T03 read  block 1
+T03 will read block 254
+T04 read  block 9
+T04 will read block 246
+T05 read  block 17
+T05 will read block 238
+T06 read  block 25
+T06 will read block 230
+T07 read  block 33
+T07 will read block 222
+T08 read  block 41
+T08 will read block 214
+T09 read  block 49
+T09 will read block 206
+T10 read  block 57
+T10 will read block 198
+T11 read  block 65
+T11 will read block 190
+T12 read  block 73
+T12 will read block 182
+T13 read  block 81
+T13 will read block 174
+T14 read  block 89
+T14 will read block 166
+T15 read  block 97
+T15 will read block 158
+T16 read  block 105
+T16 will read block 150
+T17 read  block 113
+T17 will read block 142
+T18 read  block 121
+T18 will read block 134
+T03 read  block 254
+T03 block 1 contents: [<--bloco 0001------------------------------------------------->
+]
+T03 block 254 contents: [<--bloco 0254------------------------------------------------->
+]
+T03 will write block 254
+T04 read  block 246
+T04 block 9 contents: [<--bloco 0009------------------------------------------------->
+]
+T04 block 246 contents: [<--bloco 0246------------------------------------------------->
+]
+T04 will write block 246
+T05 read  block 238
+T05 block 17 contents: [<--bloco 0017------------------------------------------------->
+]
+T05 block 238 contents: [<--bloco 0238------------------------------------------------->
+]
+T05 will write block 238
+T06 read  block 230
+T06 block 25 contents: [<--bloco 0025------------------------------------------------->
+]
+T06 block 230 contents: [<--bloco 0230------------------------------------------------->
+]
+T06 will write block 230
+T07 read  block 222
+T07 block 33 contents: [<--bloco 0033------------------------------------------------->
+]
+T07 block 222 contents: [<--bloco 0222------------------------------------------------->
+]
+T07 will write block 222
+T08 read  block 214
+T08 block 41 contents: [<--bloco 0041------------------------------------------------->
+]
+T08 block 214 contents: [<--bloco 0214------------------------------------------------->
+]
+T08 will write block 214
+T09 read  block 206
+T09 block 49 contents: [<--bloco 0049------------------------------------------------->
+]
+T09 block 206 contents: [<--bloco 0206------------------------------------------------->
+]
+T09 will write block 206
+T10 read  block 198
+T10 block 57 contents: [<--bloco 0057------------------------------------------------->
+]
+T10 block 198 contents: [<--bloco 0198------------------------------------------------->
+]
+T10 will write block 198
+T11 read  block 190
+T11 block 65 contents: [<--bloco 0065------------------------------------------------->
+]
+T11 block 190 contents: [<--bloco 0190------------------------------------------------->
+]
+T11 will write block 190
+T12 read  block 182
+T12 block 73 contents: [<--bloco 0073------------------------------------------------->
+]
+T12 block 182 contents: [<--bloco 0182------------------------------------------------->
+]
+T12 will write block 182
+T13 read  block 174
+T13 block 81 contents: [<--bloco 0081------------------------------------------------->
+]
+T13 block 174 contents: [<--bloco 0174------------------------------------------------->
+]
+T13 will write block 174
+T14 read  block 166
+T14 block 89 contents: [<--bloco 0089------------------------------------------------->
+]
+T14 block 166 contents: [<--bloco 0166------------------------------------------------->
+]
+T14 will write block 166
+T15 read  block 158
+T15 block 97 contents: [<--bloco 0097------------------------------------------------->
+]
+T15 block 158 contents: [<--bloco 0158------------------------------------------------->
+]
+T15 will write block 158
+T16 read  block 150
+T16 block 105 contents: [<--bloco 0105------------------------------------------------->
+]
+T16 block 150 contents: [<--bloco 0150------------------------------------------------->
+]
+T16 will write block 150
+T17 read  block 142
+T17 block 113 contents: [<--bloco 0113------------------------------------------------->
+]
+T17 block 142 contents: [<--bloco 0142------------------------------------------------->
+]
+T17 will write block 142
+T18 read  block 134
+T18 block 121 contents: [<--bloco 0121------------------------------------------------->
+]
+T18 block 134 contents: [<--bloco 0134------------------------------------------------->
+]
+T18 will write block 134
+T03 wrote block 254
+T03 will write block 1
+T04 wrote block 246
+T04 will write block 9
+T05 wrote block 238
+T05 will write block 17
+T06 wrote block 230
+T06 will write block 25
+T07 wrote block 222
+T07 will write block 33
+T08 wrote block 214
+T08 will write block 41
+T09 wrote block 206
+T09 will write block 49
+T10 wrote block 198
+T10 will write block 57
+T11 wrote block 190
+T11 will write block 65
+T12 wrote block 182
+T12 will write block 73
+T13 wrote block 174
+T13 will write block 81
+T14 wrote block 166
+T14 will write block 89
+T15 wrote block 158
+T15 will write block 97
+T16 wrote block 150
+T16 will write block 105
+T17 wrote block 142
+T17 will write block 113
+T18 wrote block 134
+T18 will write block 121
+T03 wrote block 1
+T03 will read block 2
+T04 wrote block 9
+T04 will read block 10
+T05 wrote block 17
+T05 will read block 18
+T06 wrote block 25
+T06 will read block 26
+T07 wrote block 33
+T07 will read block 34
+T08 wrote block 41
+T08 will read block 42
+T09 wrote block 49
+T09 will read block 50
+T10 wrote block 57
+T10 will read block 58
+T11 wrote block 65
+T11 will read block 66
+T12 wrote block 73
+T12 will read block 74
+T13 wrote block 81
+T13 will read block 82
+T14 wrote block 89
+T14 will read block 90
+T15 wrote block 97
+T15 will read block 98
+T16 wrote block 105
+T16 will read block 106
+T17 wrote block 113
+T17 will read block 114
+T18 wrote block 121
+T18 will read block 122
+T03 read  block 2
+T03 will read block 253
+T04 read  block 10
+T04 will read block 245
+T05 read  block 18
+T05 will read block 237
+T06 read  block 26
+T06 will read block 229
+T07 read  block 34
+T07 will read block 221
+T08 read  block 42
+T08 will read block 213
+T09 read  block 50
+T09 will read block 205
+T10 read  block 58
+T10 will read block 197
+T11 read  block 66
+T11 will read block 189
+T12 read  block 74
+T12 will read block 181
+T13 read  block 82
+T13 will read block 173
+T14 read  block 90
+T14 will read block 165
+T15 read  block 98
+T15 will read block 157
+T16 read  block 106
+T16 will read block 149
+T17 read  block 114
+T17 will read block 141
+T18 read  block 122
+T18 will read block 133
+T03 read  block 253
+T03 block 2 contents: [<--bloco 0002------------------------------------------------->
+]
+T03 block 253 contents: [<--bloco 0253------------------------------------------------->
+]
+T03 will write block 253
+T04 read  block 245
+T04 block 10 contents: [<--bloco 0010------------------------------------------------->
+]
+T04 block 245 contents: [<--bloco 0245------------------------------------------------->
+]
+T04 will write block 245
+T05 read  block 237
+T05 block 18 contents: [<--bloco 0018------------------------------------------------->
+]
+T05 block 237 contents: [<--bloco 0237------------------------------------------------->
+]
+T05 will write block 237
+T06 read  block 229
+T06 block 26 contents: [<--bloco 0026------------------------------------------------->
+]
+T06 block 229 contents: [<--bloco 0229------------------------------------------------->
+]
+T06 will write block 229
+T07 read  block 221
+T07 block 34 contents: [<--bloco 0034------------------------------------------------->
+]
+T07 block 221 contents: [<--bloco 0221------------------------------------------------->
+]
+T07 will write block 221
+T08 read  block 213
+T08 block 42 contents: [<--bloco 0042------------------------------------------------->
+]
+T08 block 213 contents: [<--bloco 0213------------------------------------------------->
+]
+T08 will write block 213
+T09 read  block 205
+T09 block 50 contents: [<--bloco 0050------------------------------------------------->
+]
+T09 block 205 contents: [<--bloco 0205------------------------------------------------->
+]
+T09 will write block 205
+T10 read  block 197
+T10 block 58 contents: [<--bloco 0058------------------------------------------------->
+]
+T10 block 197 contents: [<--bloco 0197------------------------------------------------->
+]
+T10 will write block 197
+T11 read  block 189
+T11 block 66 contents: [<--bloco 0066------------------------------------------------->
+]
+T11 block 189 contents: [<--bloco 0189------------------------------------------------->
+]
+T11 will write block 189
+T12 read  block 181
+T12 block 74 contents: [<--bloco 0074------------------------------------------------->
+]
+T12 block 181 contents: [<--bloco 0181------------------------------------------------->
+]
+T12 will write block 181
+T13 read  block 173
+T13 block 82 contents: [<--bloco 0082------------------------------------------------->
+]
+T13 block 173 contents: [<--bloco 0173------------------------------------------------->
+]
+T13 will write block 173
+T14 read  block 165
+T14 block 90 contents: [<--bloco 0090------------------------------------------------->
+]
+T14 block 165 contents: [<--bloco 0165------------------------------------------------->
+]
+T14 will write block 165
+T15 read  block 157
+T15 block 98 contents: [<--bloco 0098------------------------------------------------->
+]
+T15 block 157 contents: [<--bloco 0157------------------------------------------------->
+]
+T15 will write block 157
+T16 read  block 149
+T16 block 106 contents: [<--bloco 0106------------------------------------------------->
+]
+T16 block 149 contents: [<--bloco 0149------------------------------------------------->
+]
+T16 will write block 149
+T17 read  block 141
+T17 block 114 contents: [<--bloco 0114------------------------------------------------->
+]
+T17 block 141 contents: [<--bloco 0141------------------------------------------------->
+]
+T17 will write block 141
+T18 read  block 133
+T18 block 122 contents: [<--bloco 0122------------------------------------------------->
+]
+T18 block 133 contents: [<--bloco 0133------------------------------------------------->
+]
+T18 will write block 133
+T03 wrote block 253
+T03 will write block 2
+T04 wrote block 245
+T04 will write block 10
+T05 wrote block 237
+T05 will write block 18
+T06 wrote block 229
+T06 will write block 26
+T07 wrote block 221
+T07 will write block 34
+T08 wrote block 213
+T08 will write block 42
+T09 wrote block 205
+T09 will write block 50
+T10 wrote block 197
+T10 will write block 58
+T11 wrote block 189
+T11 will write block 66
+T12 wrote block 181
+T12 will write block 74
+T13 wrote block 173
+T13 will write block 82
+T14 wrote block 165
+T14 will write block 90
+T15 wrote block 157
+T15 will write block 98
+T16 wrote block 149
+T16 will write block 106
+T17 wrote block 141
+T17 will write block 114
+T18 wrote block 133
+T18 will write block 122
+T03 wrote block 2
+T03 will read block 3
+T04 wrote block 10
+T04 will read block 11
+T05 wrote block 18
+T05 will read block 19
+T06 wrote block 26
+T06 will read block 27
+T07 wrote block 34
+T07 will read block 35
+T08 wrote block 42
+T08 will read block 43
+T09 wrote block 50
+T09 will read block 51
+T10 wrote block 58
+T10 will read block 59
+T11 wrote block 66
+T11 will read block 67
+T12 wrote block 74
+T12 will read block 75
+T13 wrote block 82
+T13 will read block 83
+T14 wrote block 90
+T14 will read block 91
+T15 wrote block 98
+T15 will read block 99
+T16 wrote block 106
+T16 will read block 107
+T17 wrote block 114
+T17 will read block 115
+T18 wrote block 122
+T18 will read block 123
+T03 read  block 3
+T03 will read block 252
+T04 read  block 11
+T04 will read block 244
+T05 read  block 19
+T05 will read block 236
+T06 read  block 27
+T06 will read block 228
+T07 read  block 35
+T07 will read block 220
+T08 read  block 43
+T08 will read block 212
+T09 read  block 51
+T09 will read block 204
+T10 read  block 59
+T10 will read block 196
+T11 read  block 67
+T11 will read block 188
+T12 read  block 75
+T12 will read block 180
+T13 read  block 83
+T13 will read block 172
+T14 read  block 91
+T14 will read block 164
+T15 read  block 99
+T15 will read block 156
+T16 read  block 107
+T16 will read block 148
+T17 read  block 115
+T17 will read block 140
+T18 read  block 123
+T18 will read block 132
+T03 read  block 252
+T03 block 3 contents: [<--bloco 0003------------------------------------------------->
+]
+T03 block 252 contents: [<--bloco 0252------------------------------------------------->
+]
+T03 will write block 252
+T04 read  block 244
+T04 block 11 contents: [<--bloco 0011------------------------------------------------->
+]
+T04 block 244 contents: [<--bloco 0244------------------------------------------------->
+]
+T04 will write block 244
+T05 read  block 236
+T05 block 19 contents: [<--bloco 0019------------------------------------------------->
+]
+T05 block 236 contents: [<--bloco 0236------------------------------------------------->
+]
+T05 will write block 236
+T06 read  block 228
+T06 block 27 contents: [<--bloco 0027------------------------------------------------->
+]
+T06 block 228 contents: [<--bloco 0228------------------------------------------------->
+]
+T06 will write block 228
+T07 read  block 220
+T07 block 35 contents: [<--bloco 0035------------------------------------------------->
+]
+T07 block 220 contents: [<--bloco 0220------------------------------------------------->
+]
+T07 will write block 220
+T08 read  block 212
+T08 block 43 contents: [<--bloco 0043------------------------------------------------->
+]
+T08 block 212 contents: [<--bloco 0212------------------------------------------------->
+]
+T08 will write block 212
+T09 read  block 204
+T09 block 51 contents: [<--bloco 0051------------------------------------------------->
+]
+T09 block 204 contents: [<--bloco 0204------------------------------------------------->
+]
+T09 will write block 204
+T10 read  block 196
+T10 block 59 contents: [<--bloco 0059------------------------------------------------->
+]
+T10 block 196 contents: [<--bloco 0196------------------------------------------------->
+]
+T10 will write block 196
+T11 read  block 188
+T11 block 67 contents: [<--bloco 0067------------------------------------------------->
+]
+T11 block 188 contents: [<--bloco 0188------------------------------------------------->
+]
+T11 will write block 188
+T12 read  block 180
+T12 block 75 contents: [<--bloco 0075------------------------------------------------->
+]
+T12 block 180 contents: [<--bloco 0180------------------------------------------------->
+]
+T12 will write block 180
+T13 read  block 172
+T13 block 83 contents: [<--bloco 0083------------------------------------------------->
+]
+T13 block 172 contents: [<--bloco 0172------------------------------------------------->
+]
+T13 will write block 172
+T14 read  block 164
+T14 block 91 contents: [<--bloco 0091------------------------------------------------->
+]
+T14 block 164 contents: [<--bloco 0164------------------------------------------------->
+]
+T14 will write block 164
+T15 read  block 156
+T15 block 99 contents: [<--bloco 0099------------------------------------------------->
+]
+T15 block 156 contents: [<--bloco 0156------------------------------------------------->
+]
+T15 will write block 156
+T16 read  block 148
+T16 block 107 contents: [<--bloco 0107------------------------------------------------->
+]
+T16 block 148 contents: [<--bloco 0148------------------------------------------------->
+]
+T16 will write block 148
+T17 read  block 140
+T17 block 115 contents: [<--bloco 0115------------------------------------------------->
+]
+T17 block 140 contents: [<--bloco 0140------------------------------------------------->
+]
+T17 will write block 140
+T18 read  block 132
+T18 block 123 contents: [<--bloco 0123------------------------------------------------->
+]
+T18 block 132 contents: [<--bloco 0132------------------------------------------------->
+]
+T18 will write block 132
+T03 wrote block 252
+T03 will write block 3
+T04 wrote block 244
+T04 will write block 11
+T05 wrote block 236
+T05 will write block 19
+T06 wrote block 228
+T06 will write block 27
+T07 wrote block 220
+T07 will write block 35
+T08 wrote block 212
+T08 will write block 43
+T09 wrote block 204
+T09 will write block 51
+T10 wrote block 196
+T10 will write block 59
+T11 wrote block 188
+T11 will write block 67
+T12 wrote block 180
+T12 will write block 75
+T13 wrote block 172
+T13 will write block 83
+T14 wrote block 164
+T14 will write block 91
+T15 wrote block 156
+T15 will write block 99
+T16 wrote block 148
+T16 will write block 107
+T17 wrote block 140
+T17 will write block 115
+T18 wrote block 132
+T18 will write block 123
+T03 wrote block 3
+T03 will read block 4
+T04 wrote block 11
+T04 will read block 12
+T05 wrote block 19
+T05 will read block 20
+T06 wrote block 27
+T06 will read block 28
+T07 wrote block 35
+T07 will read block 36
+T08 wrote block 43
+T08 will read block 44
+T09 wrote block 51
+T09 will read block 52
+T10 wrote block 59
+T10 will read block 60
+T11 wrote block 67
+T11 will read block 68
+T12 wrote block 75
+T12 will read block 76
+T13 wrote block 83
+T13 will read block 84
+T14 wrote block 91
+T14 will read block 92
+T15 wrote block 99
+T15 will read block 100
+T16 wrote block 107
+T16 will read block 108
+T17 wrote block 115
+T17 will read block 116
+T18 wrote block 123
+T18 will read block 124
+T03 read  block 4
+T03 will read block 251
+T04 read  block 12
+T04 will read block 243
+T05 read  block 20
+T05 will read block 235
+T06 read  block 28
+T06 will read block 227
+T07 read  block 36
+T07 will read block 219
+T08 read  block 44
+T08 will read block 211
+T09 read  block 52
+T09 will read block 203
+T10 read  block 60
+T10 will read block 195
+T11 read  block 68
+T11 will read block 187
+T12 read  block 76
+T12 will read block 179
+T13 read  block 84
+T13 will read block 171
+T14 read  block 92
+T14 will read block 163
+T15 read  block 100
+T15 will read block 155
+T16 read  block 108
+T16 will read block 147
+T17 read  block 116
+T17 will read block 139
+T18 read  block 124
+T18 will read block 131
+T03 read  block 251
+T03 block 4 contents: [<--bloco 0004------------------------------------------------->
+]
+T03 block 251 contents: [<--bloco 0251------------------------------------------------->
+]
+T03 will write block 251
+T04 read  block 243
+T04 block 12 contents: [<--bloco 0012------------------------------------------------->
+]
+T04 block 243 contents: [<--bloco 0243------------------------------------------------->
+]
+T04 will write block 243
+T05 read  block 235
+T05 block 20 contents: [<--bloco 0020------------------------------------------------->
+]
+T05 block 235 contents: [<--bloco 0235------------------------------------------------->
+]
+T05 will write block 235
+T06 read  block 227
+T06 block 28 contents: [<--bloco 0028------------------------------------------------->
+]
+T06 block 227 contents: [<--bloco 0227------------------------------------------------->
+]
+T06 will write block 227
+T07 read  block 219
+T07 block 36 contents: [<--bloco 0036------------------------------------------------->
+]
+T07 block 219 contents: [<--bloco 0219------------------------------------------------->
+]
+T07 will write block 219
+T08 read  block 211
+T08 block 44 contents: [<--bloco 0044------------------------------------------------->
+]
+T08 block 211 contents: [<--bloco 0211------------------------------------------------->
+]
+T08 will write block 211
+T09 read  block 203
+T09 block 52 contents: [<--bloco 0052------------------------------------------------->
+]
+T09 block 203 contents: [<--bloco 0203------------------------------------------------->
+]
+T09 will write block 203
+T10 read  block 195
+T10 block 60 contents: [<--bloco 0060------------------------------------------------->
+]
+T10 block 195 contents: [<--bloco 0195------------------------------------------------->
+]
+T10 will write block 195
+T11 read  block 187
+T11 block 68 contents: [<--bloco 0068------------------------------------------------->
+]
+T11 block 187 contents: [<--bloco 0187------------------------------------------------->
+]
+T11 will write block 187
+T12 read  block 179
+T12 block 76 contents: [<--bloco 0076------------------------------------------------->
+]
+T12 block 179 contents: [<--bloco 0179------------------------------------------------->
+]
+T12 will write block 179
+T13 read  block 171
+T13 block 84 contents: [<--bloco 0084------------------------------------------------->
+]
+T13 block 171 contents: [<--bloco 0171------------------------------------------------->
+]
+T13 will write block 171
+T14 read  block 163
+T14 block 92 contents: [<--bloco 0092------------------------------------------------->
+]
+T14 block 163 contents: [<--bloco 0163------------------------------------------------->
+]
+T14 will write block 163
+T15 read  block 155
+T15 block 100 contents: [<--bloco 0100------------------------------------------------->
+]
+T15 block 155 contents: [<--bloco 0155------------------------------------------------->
+]
+T15 will write block 155
+T16 read  block 147
+T16 block 108 contents: [<--bloco 0108------------------------------------------------->
+]
+T16 block 147 contents: [<--bloco 0147------------------------------------------------->
+]
+T16 will write block 147
+T17 read  block 139
+T17 block 116 contents: [<--bloco 0116------------------------------------------------->
+]
+T17 block 139 contents: [<--bloco 0139------------------------------------------------->
+]
+T17 will write block 139
+T18 read  block 131
+T18 block 124 contents: [<--bloco 0124------------------------------------------------->
+]
+T18 block 131 contents: [<--bloco 0131------------------------------------------------->
+]
+T18 will write block 131
+T03 wrote block 251
+T03 will write block 4
+T04 wrote block 243
+T04 will write block 12
+T05 wrote block 235
+T05 will write block 20
+T06 wrote block 227
+T06 will write block 28
+T07 wrote block 219
+T07 will write block 36
+T08 wrote block 211
+T08 will write block 44
+T09 wrote block 203
+T09 will write block 52
+T10 wrote block 195
+T10 will write block 60
+T11 wrote block 187
+T11 will write block 68
+T12 wrote block 179
+T12 will write block 76
+T13 wrote block 171
+T13 will write block 84
+T14 wrote block 163
+T14 will write block 92
+T15 wrote block 155
+T15 will write block 100
+T16 wrote block 147
+T16 will write block 108
+T17 wrote block 139
+T17 will write block 116
+T18 wrote block 131
+T18 will write block 124
+T03 wrote block 4
+T03 will read block 5
+T04 wrote block 12
+T04 will read block 13
+T05 wrote block 20
+T05 will read block 21
+T06 wrote block 28
+T06 will read block 29
+T07 wrote block 36
+T07 will read block 37
+T08 wrote block 44
+T08 will read block 45
+T09 wrote block 52
+T09 will read block 53
+T10 wrote block 60
+T10 will read block 61
+T11 wrote block 68
+T11 will read block 69
+T12 wrote block 76
+T12 will read block 77
+T13 wrote block 84
+T13 will read block 85
+T14 wrote block 92
+T14 will read block 93
+T15 wrote block 100
+T15 will read block 101
+T16 wrote block 108
+T16 will read block 109
+T17 wrote block 116
+T17 will read block 117
+T18 wrote block 124
+T18 will read block 125
+T03 read  block 5
+T03 will read block 250
+T04 read  block 13
+T04 will read block 242
+T05 read  block 21
+T05 will read block 234
+T06 read  block 29
+T06 will read block 226
+T07 read  block 37
+T07 will read block 218
+T08 read  block 45
+T08 will read block 210
+T09 read  block 53
+T09 will read block 202
+T10 read  block 61
+T10 will read block 194
+T11 read  block 69
+T11 will read block 186
+T12 read  block 77
+T12 will read block 178
+T13 read  block 85
+T13 will read block 170
+T14 read  block 93
+T14 will read block 162
+T15 read  block 101
+T15 will read block 154
+T16 read  block 109
+T16 will read block 146
+T17 read  block 117
+T17 will read block 138
+T18 read  block 125
+T18 will read block 130
+T03 read  block 250
+T03 block 5 contents: [<--bloco 0005------------------------------------------------->
+]
+T03 block 250 contents: [<--bloco 0250------------------------------------------------->
+]
+T03 will write block 250
+T04 read  block 242
+T04 block 13 contents: [<--bloco 0013------------------------------------------------->
+]
+T04 block 242 contents: [<--bloco 0242------------------------------------------------->
+]
+T04 will write block 242
+T05 read  block 234
+T05 block 21 contents: [<--bloco 0021------------------------------------------------->
+]
+T05 block 234 contents: [<--bloco 0234------------------------------------------------->
+]
+T05 will write block 234
+T06 read  block 226
+T06 block 29 contents: [<--bloco 0029------------------------------------------------->
+]
+T06 block 226 contents: [<--bloco 0226------------------------------------------------->
+]
+T06 will write block 226
+T07 read  block 218
+T07 block 37 contents: [<--bloco 0037------------------------------------------------->
+]
+T07 block 218 contents: [<--bloco 0218------------------------------------------------->
+]
+T07 will write block 218
+T08 read  block 210
+T08 block 45 contents: [<--bloco 0045------------------------------------------------->
+]
+T08 block 210 contents: [<--bloco 0210------------------------------------------------->
+]
+T08 will write block 210
+T09 read  block 202
+T09 block 53 contents: [<--bloco 0053------------------------------------------------->
+]
+T09 block 202 contents: [<--bloco 0202------------------------------------------------->
+]
+T09 will write block 202
+T10 read  block 194
+T10 block 61 contents: [<--bloco 0061------------------------------------------------->
+]
+T10 block 194 contents: [<--bloco 0194------------------------------------------------->
+]
+T10 will write block 194
+T11 read  block 186
+T11 block 69 contents: [<--bloco 0069------------------------------------------------->
+]
+T11 block 186 contents: [<--bloco 0186------------------------------------------------->
+]
+T11 will write block 186
+T12 read  block 178
+T12 block 77 contents: [<--bloco 0077------------------------------------------------->
+]
+T12 block 178 contents: [<--bloco 0178------------------------------------------------->
+]
+T12 will write block 178
+T13 read  block 170
+T13 block 85 contents: [<--bloco 0085------------------------------------------------->
+]
+T13 block 170 contents: [<--bloco 0170------------------------------------------------->
+]
+T13 will write block 170
+T14 read  block 162
+T14 block 93 contents: [<--bloco 0093------------------------------------------------->
+]
+T14 block 162 contents: [<--bloco 0162------------------------------------------------->
+]
+T14 will write block 162
+T15 read  block 154
+T15 block 101 contents: [<--bloco 0101------------------------------------------------->
+]
+T15 block 154 contents: [<--bloco 0154------------------------------------------------->
+]
+T15 will write block 154
+T16 read  block 146
+T16 block 109 contents: [<--bloco 0109------------------------------------------------->
+]
+T16 block 146 contents: [<--bloco 0146------------------------------------------------->
+]
+T16 will write block 146
+T17 read  block 138
+T17 block 117 contents: [<--bloco 0117------------------------------------------------->
+]
+T17 block 138 contents: [<--bloco 0138------------------------------------------------->
+]
+T17 will write block 138
+T18 read  block 130
+T18 block 125 contents: [<--bloco 0125------------------------------------------------->
+]
+T18 block 130 contents: [<--bloco 0130------------------------------------------------->
+]
+T18 will write block 130
+T03 wrote block 250
+T03 will write block 5
+T04 wrote block 242
+T04 will write block 13
+T05 wrote block 234
+T05 will write block 21
+T06 wrote block 226
+T06 will write block 29
+T07 wrote block 218
+T07 will write block 37
+T08 wrote block 210
+T08 will write block 45
+T09 wrote block 202
+T09 will write block 53
+T10 wrote block 194
+T10 will write block 61
+T11 wrote block 186
+T11 will write block 69
+T12 wrote block 178
+T12 will write block 77
+T13 wrote block 170
+T13 will write block 85
+T14 wrote block 162
+T14 will write block 93
+T15 wrote block 154
+T15 will write block 101
+T16 wrote block 146
+T16 will write block 109
+T17 wrote block 138
+T17 will write block 117
+T18 wrote block 130
+T18 will write block 125
+T03 wrote block 5
+T03 will read block 6
+T04 wrote block 13
+T04 will read block 14
+T05 wrote block 21
+T05 will read block 22
+T06 wrote block 29
+T06 will read block 30
+T07 wrote block 37
+T07 will read block 38
+T08 wrote block 45
+T08 will read block 46
+T09 wrote block 53
+T09 will read block 54
+T10 wrote block 61
+T10 will read block 62
+T11 wrote block 69
+T11 will read block 70
+T12 wrote block 77
+T12 will read block 78
+T13 wrote block 85
+T13 will read block 86
+T14 wrote block 93
+T14 will read block 94
+T15 wrote block 101
+T15 will read block 102
+T16 wrote block 109
+T16 will read block 110
+T17 wrote block 117
+T17 will read block 118
+T18 wrote block 125
+T18 will read block 126
+T03 read  block 6
+T03 will read block 249
+T04 read  block 14
+T04 will read block 241
+T05 read  block 22
+T05 will read block 233
+T06 read  block 30
+T06 will read block 225
+T07 read  block 38
+T07 will read block 217
+T08 read  block 46
+T08 will read block 209
+T09 read  block 54
+T09 will read block 201
+T10 read  block 62
+T10 will read block 193
+T11 read  block 70
+T11 will read block 185
+T12 read  block 78
+T12 will read block 177
+T13 read  block 86
+T13 will read block 169
+T14 read  block 94
+T14 will read block 161
+T15 read  block 102
+T15 will read block 153
+T16 read  block 110
+T16 will read block 145
+T17 read  block 118
+T17 will read block 137
+T18 read  block 126
+T18 will read block 129
+T03 read  block 249
+T03 block 6 contents: [<--bloco 0006------------------------------------------------->
+]
+T03 block 249 contents: [<--bloco 0249------------------------------------------------->
+]
+T03 will write block 249
+T04 read  block 241
+T04 block 14 contents: [<--bloco 0014------------------------------------------------->
+]
+T04 block 241 contents: [<--bloco 0241------------------------------------------------->
+]
+T04 will write block 241
+T05 read  block 233
+T05 block 22 contents: [<--bloco 0022------------------------------------------------->
+]
+T05 block 233 contents: [<--bloco 0233------------------------------------------------->
+]
+T05 will write block 233
+T06 read  block 225
+T06 block 30 contents: [<--bloco 0030------------------------------------------------->
+]
+T06 block 225 contents: [<--bloco 0225------------------------------------------------->
+]
+T06 will write block 225
+T07 read  block 217
+T07 block 38 contents: [<--bloco 0038------------------------------------------------->
+]
+T07 block 217 contents: [<--bloco 0217------------------------------------------------->
+]
+T07 will write block 217
+T08 read  block 209
+T08 block 46 contents: [<--bloco 0046------------------------------------------------->
+]
+T08 block 209 contents: [<--bloco 0209------------------------------------------------->
+]
+T08 will write block 209
+T09 read  block 201
+T09 block 54 contents: [<--bloco 0054------------------------------------------------->
+]
+T09 block 201 contents: [<--bloco 0201------------------------------------------------->
+]
+T09 will write block 201
+T10 read  block 193
+T10 block 62 contents: [<--bloco 0062------------------------------------------------->
+]
+T10 block 193 contents: [<--bloco 0193------------------------------------------------->
+]
+T10 will write block 193
+T11 read  block 185
+T11 block 70 contents: [<--bloco 0070------------------------------------------------->
+]
+T11 block 185 contents: [<--bloco 0185------------------------------------------------->
+]
+T11 will write block 185
+T12 read  block 177
+T12 block 78 contents: [<--bloco 0078------------------------------------------------->
+]
+T12 block 177 contents: [<--bloco 0177------------------------------------------------->
+]
+T12 will write block 177
+T13 read  block 169
+T13 block 86 contents: [<--bloco 0086------------------------------------------------->
+]
+T13 block 169 contents: [<--bloco 0169------------------------------------------------->
+]
+T13 will write block 169
+T14 read  block 161
+T14 block 94 contents: [<--bloco 0094------------------------------------------------->
+]
+T14 block 161 contents: [<--bloco 0161------------------------------------------------->
+]
+T14 will write block 161
+T15 read  block 153
+T15 block 102 contents: [<--bloco 0102------------------------------------------------->
+]
+T15 block 153 contents: [<--bloco 0153------------------------------------------------->
+]
+T15 will write block 153
+T16 read  block 145
+T16 block 110 contents: [<--bloco 0110------------------------------------------------->
+]
+T16 block 145 contents: [<--bloco 0145------------------------------------------------->
+]
+T16 will write block 145
+T17 read  block 137
+T17 block 118 contents: [<--bloco 0118------------------------------------------------->
+]
+T17 block 137 contents: [<--bloco 0137------------------------------------------------->
+]
+T17 will write block 137
+T18 read  block 129
+T18 block 126 contents: [<--bloco 0126------------------------------------------------->
+]
+T18 block 129 contents: [<--bloco 0129------------------------------------------------->
+]
+T18 will write block 129
+T03 wrote block 249
+T03 will write block 6
+T04 wrote block 241
+T04 will write block 14
+T05 wrote block 233
+T05 will write block 22
+T06 wrote block 225
+T06 will write block 30
+T07 wrote block 217
+T07 will write block 38
+T08 wrote block 209
+T08 will write block 46
+T09 wrote block 201
+T09 will write block 54
+T10 wrote block 193
+T10 will write block 62
+T11 wrote block 185
+T11 will write block 70
+T12 wrote block 177
+T12 will write block 78
+T13 wrote block 169
+T13 will write block 86
+T14 wrote block 161
+T14 will write block 94
+T15 wrote block 153
+T15 will write block 102
+T16 wrote block 145
+T16 will write block 110
+T17 wrote block 137
+T17 will write block 118
+T18 wrote block 129
+T18 will write block 126
+T03 wrote block 6
+T03 will read block 7
+T04 wrote block 14
+T04 will read block 15
+T05 wrote block 22
+T05 will read block 23
+T06 wrote block 30
+T06 will read block 31
+T07 wrote block 38
+T07 will read block 39
+T08 wrote block 46
+T08 will read block 47
+T09 wrote block 54
+T09 will read block 55
+T10 wrote block 62
+T10 will read block 63
+T11 wrote block 70
+T11 will read block 71
+T12 wrote block 78
+T12 will read block 79
+T13 wrote block 86
+T13 will read block 87
+T14 wrote block 94
+T14 will read block 95
+T15 wrote block 102
+T15 will read block 103
+T16 wrote block 110
+T16 will read block 111
+T17 wrote block 118
+T17 will read block 119
+T18 wrote block 126
+T18 will read block 127
+T03 read  block 7
+T03 will read block 248
+T04 read  block 15
+T04 will read block 240
+T05 read  block 23
+T05 will read block 232
+T06 read  block 31
+T06 will read block 224
+T07 read  block 39
+T07 will read block 216
+T08 read  block 47
+T08 will read block 208
+T09 read  block 55
+T09 will read block 200
+T10 read  block 63
+T10 will read block 192
+T11 read  block 71
+T11 will read block 184
+T12 read  block 79
+T12 will read block 176
+T13 read  block 87
+T13 will read block 168
+T14 read  block 95
+T14 will read block 160
+T15 read  block 103
+T15 will read block 152
+T16 read  block 111
+T16 will read block 144
+T17 read  block 119
+T17 will read block 136
+T18 read  block 127
+T18 will read block 128
+T03 read  block 248
+T03 block 7 contents: [<--bloco 0007------------------------------------------------->
+]
+T03 block 248 contents: [<--bloco 0248------------------------------------------------->
+]
+T03 will write block 248
+T04 read  block 240
+T04 block 15 contents: [<--bloco 0015------------------------------------------------->
+]
+T04 block 240 contents: [<--bloco 0240------------------------------------------------->
+]
+T04 will write block 240
+T05 read  block 232
+T05 block 23 contents: [<--bloco 0023------------------------------------------------->
+]
+T05 block 232 contents: [<--bloco 0232------------------------------------------------->
+]
+T05 will write block 232
+T06 read  block 224
+T06 block 31 contents: [<--bloco 0031------------------------------------------------->
+]
+T06 block 224 contents: [<--bloco 0224------------------------------------------------->
+]
+T06 will write block 224
+T07 read  block 216
+T07 block 39 contents: [<--bloco 0039------------------------------------------------->
+]
+T07 block 216 contents: [<--bloco 0216------------------------------------------------->
+]
+T07 will write block 216
+T08 read  block 208
+T08 block 47 contents: [<--bloco 0047------------------------------------------------->
+]
+T08 block 208 contents: [<--bloco 0208------------------------------------------------->
+]
+T08 will write block 208
+T09 read  block 200
+T09 block 55 contents: [<--bloco 0055------------------------------------------------->
+]
+T09 block 200 contents: [<--bloco 0200------------------------------------------------->
+]
+T09 will write block 200
+T10 read  block 192
+T10 block 63 contents: [<--bloco 0063------------------------------------------------->
+]
+T10 block 192 contents: [<--bloco 0192------------------------------------------------->
+]
+T10 will write block 192
+T11 read  block 184
+T11 block 71 contents: [<--bloco 0071------------------------------------------------->
+]
+T11 block 184 contents: [<--bloco 0184------------------------------------------------->
+]
+T11 will write block 184
+T12 read  block 176
+T12 block 79 contents: [<--bloco 0079------------------------------------------------->
+]
+T12 block 176 contents: [<--bloco 0176------------------------------------------------->
+]
+T12 will write block 176
+T13 read  block 168
+T13 block 87 contents: [<--bloco 0087------------------------------------------------->
+]
+T13 block 168 contents: [<--bloco 0168------------------------------------------------->
+]
+T13 will write block 168
+T14 read  block 160
+T14 block 95 contents: [<--bloco 0095------------------------------------------------->
+]
+T14 block 160 contents: [<--bloco 0160------------------------------------------------->
+]
+T14 will write block 160
+T15 read  block 152
+T15 block 103 contents: [<--bloco 0103------------------------------------------------->
+]
+T15 block 152 contents: [<--bloco 0152------------------------------------------------->
+]
+T15 will write block 152
+T16 read  block 144
+T16 block 111 contents: [<--bloco 0111------------------------------------------------->
+]
+T16 block 144 contents: [<--bloco 0144------------------------------------------------->
+]
+T16 will write block 144
+T17 read  block 136
+T17 block 119 contents: [<--bloco 0119------------------------------------------------->
+]
+T17 block 136 contents: [<--bloco 0136------------------------------------------------->
+]
+T17 will write block 136
+T18 read  block 128
+T18 block 127 contents: [<--bloco 0127------------------------------------------------->
+]
+T18 block 128 contents: [<--bloco 0128------------------------------------------------->
+]
+T18 will write block 128
+T03 wrote block 248
+T03 will write block 7
+T04 wrote block 240
+T04 will write block 15
+T05 wrote block 232
+T05 will write block 23
+T06 wrote block 224
+T06 will write block 31
+T07 wrote block 216
+T07 will write block 39
+T08 wrote block 208
+T08 will write block 47
+T09 wrote block 200
+T09 will write block 55
+T10 wrote block 192
+T10 will write block 63
+T11 wrote block 184
+T11 will write block 71
+T12 wrote block 176
+T12 will write block 79
+T13 wrote block 168
+T13 will write block 87
+T14 wrote block 160
+T14 will write block 95
+T15 wrote block 152
+T15 will write block 103
+T16 wrote block 144
+T16 will write block 111
+T17 wrote block 136
+T17 will write block 119
+T18 wrote block 128
+T18 will write block 127
+T03 wrote block 7
+T3 finished
+Task 3 exit: running time 49051 ms, cpu time     0 ms, 33 activations
+T04 wrote block 15
+T4 finished
+Task 4 exit: running time 49122 ms, cpu time     1 ms, 33 activations
+T05 wrote block 23
+T5 finished
+Task 5 exit: running time 49204 ms, cpu time     0 ms, 33 activations
+T06 wrote block 31
+T6 finished
+Task 6 exit: running time 49287 ms, cpu time     0 ms, 33 activations
+T07 wrote block 39
+T7 finished
+Task 7 exit: running time 49368 ms, cpu time     2 ms, 33 activations
+T08 wrote block 47
+T8 finished
+Task 8 exit: running time 49467 ms, cpu time     0 ms, 33 activations
+T09 wrote block 55
+T9 finished
+Task 9 exit: running time 49553 ms, cpu time     0 ms, 33 activations
+T10 wrote block 63
+T10 finished
+Task 10 exit: running time 49629 ms, cpu time     0 ms, 33 activations
+T11 wrote block 71
+T11 finished
+Task 11 exit: running time 49736 ms, cpu time     0 ms, 33 activations
+T12 wrote block 79
+T12 finished
+Task 12 exit: running time 49828 ms, cpu time     0 ms, 33 activations
+T13 wrote block 87
+T13 finished
+Task 13 exit: running time 49931 ms, cpu time     0 ms, 33 activations
+T14 wrote block 95
+T14 finished
+Task 14 exit: running time 50026 ms, cpu time     3 ms, 33 activations
+T15 wrote block 103
+T15 finished
+Task 15 exit: running time 50115 ms, cpu time     1 ms, 33 activations
+T16 wrote block 111
+T16 finished
+Task 16 exit: running time 50218 ms, cpu time     1 ms, 33 activations
+T17 wrote block 119
+T17 finished
+Task 17 exit: running time 50312 ms, cpu time     1 ms, 33 activations
+T18 wrote block 127
+T18 finished
+Task 18 exit: running time 50418 ms, cpu time     0 ms, 33 activations
+Main FIM
+Task 0 exit: running time 50418 ms, cpu time     0 ms, 17 activations
+Task 1 exit: running time 50418 ms, cpu time 50398 ms, 1555 activations

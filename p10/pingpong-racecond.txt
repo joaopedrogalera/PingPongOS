@@ -1,0 +1,35 @@
+Main INICIO
+30 tarefas somando 10000000 vezes cada, aguarde...
+Task 2 exit: running time 162116 ms, cpu time  3212 ms, 8107213 activations
+Task 3 exit: running time 198479 ms, cpu time  3649 ms, 10000001 activations
+Task 4 exit: running time 198479 ms, cpu time  3864 ms, 10000001 activations
+Task 5 exit: running time 198479 ms, cpu time  3729 ms, 10000001 activations
+Task 6 exit: running time 198479 ms, cpu time  3563 ms, 10000001 activations
+Task 7 exit: running time 198479 ms, cpu time  3854 ms, 10000001 activations
+Task 8 exit: running time 198479 ms, cpu time  3675 ms, 10000001 activations
+Task 9 exit: running time 198479 ms, cpu time  3796 ms, 10000001 activations
+Task 10 exit: running time 198479 ms, cpu time  3626 ms, 10000001 activations
+Task 11 exit: running time 198479 ms, cpu time  3694 ms, 10000001 activations
+Task 12 exit: running time 198479 ms, cpu time  3539 ms, 10000001 activations
+Task 13 exit: running time 198479 ms, cpu time  3647 ms, 10000001 activations
+Task 14 exit: running time 198479 ms, cpu time  3631 ms, 10000001 activations
+Task 15 exit: running time 198479 ms, cpu time  3684 ms, 10000001 activations
+Task 16 exit: running time 198479 ms, cpu time  3604 ms, 10000001 activations
+Task 17 exit: running time 198479 ms, cpu time  3587 ms, 10000001 activations
+Task 18 exit: running time 198479 ms, cpu time  3665 ms, 10000001 activations
+Task 19 exit: running time 198479 ms, cpu time  3790 ms, 10000001 activations
+Task 20 exit: running time 198479 ms, cpu time  3706 ms, 10000001 activations
+Task 21 exit: running time 198479 ms, cpu time  3704 ms, 10000001 activations
+Task 22 exit: running time 198479 ms, cpu time  3727 ms, 10000001 activations
+Task 23 exit: running time 198479 ms, cpu time  3710 ms, 10000001 activations
+Task 24 exit: running time 198479 ms, cpu time  3670 ms, 10000001 activations
+Task 25 exit: running time 198479 ms, cpu time  3785 ms, 10000001 activations
+Task 26 exit: running time 198479 ms, cpu time  3680 ms, 10000001 activations
+Task 27 exit: running time 198479 ms, cpu time  3752 ms, 10000001 activations
+Task 28 exit: running time 198479 ms, cpu time  3866 ms, 10000001 activations
+Task 29 exit: running time 198479 ms, cpu time  3700 ms, 10000001 activations
+Task 30 exit: running time 198479 ms, cpu time  3684 ms, 10000001 activations
+Task 31 exit: running time 198480 ms, cpu time  3845 ms, 10000001 activations
+Soma deu 300000000, valor correto!
+Task 0 exit: running time 198480 ms, cpu time     0 ms, 17 activations
+Task 1 exit: running time 198480 ms, cpu time 87841 ms, 298107259 activations

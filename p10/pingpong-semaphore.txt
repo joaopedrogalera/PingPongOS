@@ -1,0 +1,49 @@
+Main INICIO
+A1 zig (0)
+                 B1 zag (0)
+    A2 zig (0)
+                     B2 zag (0)
+A1 zig (1)
+                 B1 zag (1)
+    A2 zig (1)
+                     B2 zag (1)
+A1 zig (2)
+                 B1 zag (2)
+    A2 zig (2)
+                     B2 zag (2)
+A1 zig (3)
+                 B1 zag (3)
+    A2 zig (3)
+                     B2 zag (3)
+A1 zig (4)
+                 B1 zag (4)
+    A2 zig (4)
+                     B2 zag (4)
+A1 zig (5)
+                 B1 zag (5)
+    A2 zig (5)
+                     B2 zag (5)
+A1 zig (6)
+                 B1 zag (6)
+    A2 zig (6)
+                     B2 zag (6)
+A1 zig (7)
+                 B1 zag (7)
+    A2 zig (7)
+                     B2 zag (7)
+A1 zig (8)
+                 B1 zag (8)
+    A2 zig (8)
+                     B2 zag (8)
+A1 zig (9)
+Task 2 exit: 37004 ms run time, 0 ms CPU time, 20 activations
+                 B1 zag (9)
+    A2 zig (9)
+                     B2 zag (9)
+Task 4 exit: 38005 ms run time, 1 ms CPU time, 21 activations
+Task 3 exit: 38006 ms run time, 3 ms CPU time, 21 activations
+Task 5 exit: 38006 ms run time, 1 ms CPU time, 21 activations
+Main FIM
+Task 0 exit: 38006 ms run time, 0 ms CPU time, 3 activations
+Task 1 exit: 38006 ms run time, 38000 ms CPU time, 86 activations
+

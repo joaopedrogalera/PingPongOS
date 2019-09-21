@@ -1,0 +1,74 @@
+    0 ms: Main INICIO
+    7 ms: Main espera Pang...
+   11 ms:     Pang 0 (dorme 3 s)
+   15 ms:         Peng 0 (dorme 1 s)
+   16 ms:             Ping 0 (dorme 2 s)
+   17 ms:                 Pong 0 (dorme 0 s)
+   17 ms:                 Pong 1 (dorme 3 s)
+   21 ms:                     Pung 0 (dorme 0 s)
+   21 ms:                     Pung 1 (dorme 1 s)
+ 1017 ms:         Peng 1 (dorme 2 s)
+ 1041 ms:                     Pung 2 (dorme 4 s)
+ 2002 ms:             Ping 1 (dorme 1 s)
+ 3000 ms:     Pang 1 (dorme 2 s)
+ 3000 ms:                 Pong 2 (dorme 2 s)
+ 3001 ms:         Peng 2 (dorme 0 s)
+ 3001 ms:         Peng 3 (dorme 4 s)
+ 3003 ms:             Ping 2 (dorme 3 s)
+ 5005 ms:                     Pung 3 (dorme 1 s)
+ 5000 ms:     Pang 2 (dorme 0 s)
+ 5000 ms:     Pang 3 (dorme 1 s)
+ 5001 ms:                 Pong 3 (dorme 2 s)
+ 6000 ms:             Ping 3 (dorme 1 s)
+ 6000 ms:                     Pung 4 (dorme 1 s)
+ 6002 ms:     Pang 4 (dorme 3 s)
+ 7000 ms:         Peng 4 (dorme 2 s)
+ 7000 ms:                 Pong 4 (dorme 4 s)
+ 7001 ms:             Ping 4 (dorme 2 s)
+ 7001 ms:                     Pung 5 (dorme 0 s)
+ 7003 ms:                     Pung 6 (dorme 2 s)
+ 9000 ms:     Pang 5 (dorme 3 s)
+ 9000 ms:         Peng 5 (dorme 2 s)
+ 9001 ms:             Ping 5 (dorme 0 s)
+ 9001 ms:             Ping 6 (dorme 4 s)
+ 9002 ms:                     Pung 7 (dorme 2 s)
+11000 ms:                 Pong 5 (dorme 2 s)
+11001 ms:         Peng 6 (dorme 3 s)
+11001 ms:                     Pung 8 (dorme 4 s)
+12002 ms:     Pang 6 (dorme 2 s)
+13003 ms:             Ping 7 (dorme 3 s)
+13003 ms:                 Pong 6 (dorme 1 s)
+14000 ms:         Peng 7 (dorme 1 s)
+14002 ms:     Pang 7 (dorme 2 s)
+14002 ms:                 Pong 7 (dorme 4 s)
+15001 ms:                     Pung 9 (dorme 3 s)
+15002 ms:         Peng 8 (dorme 1 s)
+16000 ms:             Ping 8 (dorme 4 s)
+16002 ms:     Pang 8 (dorme 4 s)
+16003 ms:         Peng 9 (dorme 2 s)
+18000 ms:                 Pong 8 (dorme 3 s)
+18000 ms:                     Pung FIM
+Task 6 exit: 18000 ms run time, 0 ms CPU time, 9 activations
+18001 ms:         Peng FIM
+Task 3 exit: 18001 ms run time, 0 ms CPU time, 10 activations
+20020 ms:             Ping 9 (dorme 4 s)
+20023 ms:     Pang 9 (dorme 0 s)
+20004 ms:     Pang FIM
+Task 2 exit: 20001 ms run time, 0 ms CPU time, 9 activations
+20003 ms: Pang acabou
+20006 ms: Main espera Peng...
+20007 ms: Peng acabou
+20000 ms: Main espera Ping...
+21000 ms:                 Pong 9 (dorme 0 s)
+21000 ms:                 Pong FIM
+Task 5 exit: 21000 ms run time, 0 ms CPU time, 9 activations
+24001 ms:             Ping FIM
+Task 4 exit: 24001 ms run time, 0 ms CPU time, 10 activations
+24001 ms: Ping acabou
+24001 ms: Main espera Pong...
+24001 ms: Pong acabou
+24001 ms: Main espera Pung...
+24001 ms: Pung acabou
+24004 ms: Main FIM
+Task 0 exit: 24004 ms run time, 1 ms CPU time, 3 activations
+Task 1 exit: 24004 ms run time, 24000 ms CPU time, 50 activations

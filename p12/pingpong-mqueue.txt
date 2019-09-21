@@ -1,0 +1,68 @@
+Main INICIO
+T5 enviou 383
+T6 enviou 777
+T7 enviou 793
+               T2: 383+777+793 = 1953.000000 (raiz 44.192760)
+                                 T3 consumiu 44.192760
+T5 enviou 649
+T6 enviou 362
+T7 enviou 690
+               T2: 649+362+690 = 1701.000000 (raiz 41.243181)
+                                 T4 consumiu 41.243181
+T5 enviou 540
+T5 enviou 172
+T6 enviou 211
+T7 enviou 567
+T7 enviou 782
+               T2: 540+172+211 = 923.000000 (raiz 30.380915)
+                                 T3 consumiu 30.380915
+T5 enviou 67
+T6 enviou 929
+T6 enviou 22
+               T2: 567+782+67 = 1416.000000 (raiz 37.629775)
+T6 enviou 69
+T7 enviou 167
+T5 enviou 393
+                                 T4 consumiu 37.629775
+               T2: 929+22+69 = 1020.000000 (raiz 31.937439)
+T5 enviou 373
+                                 T3 consumiu 31.937439
+T6 enviou 198
+T7 enviou 315
+               T2: 167+393+373 = 933.000000 (raiz 30.545049)
+T7 enviou 413
+                                 T4 consumiu 30.545049
+T5 enviou 956
+T5 enviou 862
+               T2: 198+315+413 = 926.000000 (raiz 30.430248)
+T6 enviou 996
+T6 enviou 925
+                                 T3 consumiu 30.430248
+T7 enviou 336
+               T2: 956+862+996 = 2814.000000 (raiz 53.047149)
+T5 enviou 846
+                                 T3 consumiu 53.047149
+               T2: 925+336+846 = 2107.000000 (raiz 45.902070)
+                                 T4 consumiu 45.902070
+T6 enviou 582
+T6 enviou 814
+T6 enviou 434
+               T2: 582+814+434 = 1830.000000 (raiz 42.778499)
+Task 2 exit: 11877 ms run time, 0 ms CPU time, 11 activations
+T7 enviou 750
+                                 T4 consumiu 42.778499
+Main destroi queueValores
+Main destroi queueRaizes
+Main FIM
+Task 0 exit: 11877 ms run time, 0 ms CPU time, 2 activations
+                                 T4 terminou
+Task 4 exit: 11877 ms run time, 0 ms CPU time, 9 activations
+T5 terminou
+Task 5 exit: 12139 ms run time, 0 ms CPU time, 11 activations
+                                 T3 terminou
+Task 3 exit: 14182 ms run time, 0 ms CPU time, 9 activations
+T6 terminou
+Task 6 exit: 14182 ms run time, 0 ms CPU time, 10 activations
+T7 terminou
+Task 7 exit: 14182 ms run time, 0 ms CPU time, 10 activations
+Task 1 exit: 14182 ms run time, 14180 ms CPU time, 62 activations
