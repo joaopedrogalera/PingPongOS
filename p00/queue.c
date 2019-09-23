@@ -4,6 +4,8 @@
 void queue_append (queue_t **queue, queue_t *elem){
   queue_t *last;
 
+  //queue é ponteiro para o first, que é um ponteiro para o primeiro elemento
+  //Faz os testes necessarios
   if(queue==NULL){
     printf("A fila nao existe\n");
   }
@@ -14,11 +16,13 @@ void queue_append (queue_t **queue, queue_t *elem){
     printf("Elemento ja esta em uma fila\n");
   }
   else if((*queue)==NULL){
+    //Se a fila é vazia, o elemento é adicionado ao first e ao prev e next dele mesmo
     (*queue) = elem;
     elem->prev = elem;
     elem->next = elem;
   }
   else{
+    //Pega o ultimo elemento e altera os ponteiros do ultimo e do ele adicionado
     last = (*queue)->prev;
     last->next = elem;
     (*queue)->prev = elem;
@@ -30,6 +34,9 @@ void queue_append (queue_t **queue, queue_t *elem){
 queue_t *queue_remove (queue_t **queue, queue_t *elem){
   queue_t *atual;
   char ismember = 0;
+
+  //queue é ponteiro para o first, que é um ponteiro para o primeiro elemento
+  //Faz os testes necessarios
   if(queue==NULL){
     printf("A fila nao existe\n");
     return (NULL);
@@ -43,6 +50,8 @@ queue_t *queue_remove (queue_t **queue, queue_t *elem){
     return(NULL);
   }
   else{
+
+    //Percorre a lista procurando o elemento. Se encontrar, seta ismember para 1
     atual = *queue;
     do{
       if(atual==elem){
@@ -57,16 +66,20 @@ queue_t *queue_remove (queue_t **queue, queue_t *elem){
       return(NULL);
     }
 
+    //Se o elemento for o unico da fila, seta a fila como vazia
     if(elem->next == elem){
       (*queue) = NULL;
     }
     else{
+      //Se o elemento for o primeiro da fila, seta o first para o elemento seguinte
       if(elem==(*queue)){
         (*queue)=elem->next;
       }
+      //ajusta os ponteiros para os elementos anterior e proximo
       elem->prev->next = elem->next;
       elem->next->prev = elem->prev;
     }
+    //ajusta os ponteiros do elemento removido
     elem->prev = NULL;
     elem->next = NULL;
 
@@ -81,6 +94,7 @@ int queue_size (queue_t *queue){
     return(0);
   }
 
+  //Percorre a lista e conta os elementos
   elem = queue;
   do{
     size += 1;
@@ -95,6 +109,7 @@ void queue_print (char *name, queue_t *queue, void print_elem (void*) ){
   printf("%s[",name);
   if(queue!=NULL){
     elem = queue;
+    //Percorre a lista e imprime os elementos
     do{
       print_elem(elem);
       elem = elem->next;
