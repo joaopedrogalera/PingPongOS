@@ -23,30 +23,28 @@ void pingpong_init(){
 
 // Cria uma nova tarefa. Retorna um ID> 0 ou erro.
 int task_create (task_t *task, void (*start_func)(void *), void *arg){
-  ucontext_t contextTask;
   char *stack;
 
-  getcontext(&contextTask);
+  getcontext(&(task->contextTask));
 
   stack = malloc(STACKSIZE);
   if (stack)
   {
-     contextTask.uc_stack.ss_sp = stack ;
-     contextTask.uc_stack.ss_size = STACKSIZE;
-     contextTask.uc_stack.ss_flags = 0;
-     contextTask.uc_link = 0;
+     (task->contextTask).uc_stack.ss_sp = stack ;
+     (task->contextTask).uc_stack.ss_size = STACKSIZE;
+     (task->contextTask).uc_stack.ss_flags = 0;
+     (task->contextTask).uc_link = 0;
   }
   else
   {
      return(-1);
   }
 
-  makecontext(&contextTask,(void*)(*start_func),1,arg);
+  makecontext(&(task->contextTask),(void*)(*start_func),1,arg);
 
   tid++;
   task->prev = NULL;
   task->next = NULL;
-  task->contextTask = contextTask;
   task->tid = tid;
 
   return(tid);
