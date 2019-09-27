@@ -12,8 +12,6 @@ task_t taskDispatcher; //task do dispatcher
 task_t *readyTasks; //Fila de tarefas prontas
 task_t *runningTask; //Ponteiro para task em execução
 
-#define DEBUG
-
 // Inicializa o sistema operacional; deve ser chamada no inicio do main()
 void pingpong_init(){
   setvbuf(stdout, 0, _IONBF, 0);
