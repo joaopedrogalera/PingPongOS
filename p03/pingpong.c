@@ -86,12 +86,11 @@ int task_switch (task_t *task){
 }
 
 void task_exit (int exitCode){
-  task_t taskAux;
   #ifdef DEBUG
     printf("task_exit: tarefa %d sendo encerrada\n",runningTask->tid);
   #endif
   //Libera as estruturas de dados utilizadas pela tarefa
-  free((runningTask->contextTask).uc_stack.ss_sp);
+  //free((runningTask->contextTask).uc_stack.ss_sp);
 
   //Se for tarefa de usuario retorna para o dispatcher. Se não, retorna para main
   if((runningTask->tid)>1){
@@ -101,7 +100,7 @@ void task_exit (int exitCode){
     runningTask = &taskMain;
   }
 
-  swapcontext(&(taskAux.contextTask),&(runningTask->contextTask));
+  setcontext(&(runningTask->contextTask));
 }
 
 int task_id (){
