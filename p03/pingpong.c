@@ -1,4 +1,6 @@
 #include "pingpong.h"
+#include "dispatcher.h"
+#include "queue.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,7 +8,11 @@
 
 int tid; //Salva numero de tarefas
 task_t taskMain; //Task da tarefa Main
+task_t taskDispatcher; //task do dispatcher
+task_t *readyTasks; //Fila de tarefas prontas
 task_t *runningTask; //Ponteiro para task em execução
+
+#define DEBUG
 
 // Inicializa o sistema operacional; deve ser chamada no inicio do main()
 void pingpong_init(){
@@ -18,6 +24,9 @@ void pingpong_init(){
   taskMain.prev = NULL;
   taskMain.next = NULL;
   taskMain.tid = 0;
+
+  //Cria a tarefa do dispatcher
+  task_create(&taskDispatcher,dispatcher_body,NULL);
 
   //Main em execução
   runningTask = &taskMain;
@@ -53,15 +62,20 @@ int task_create (task_t *task, void (*start_func)(void *), void *arg){
   task->tid = tid;
 
   #ifdef DEBUG
-    printf("task_create: Criando tarefa %d",tid);
+    printf("task_create: Criando tarefa %d\n",tid);
   #endif
+
+  //Se for tarefa de usuario, coloca na fila de protas
+  if(tid>1){
+    queue_append((queue_t**) &readyTasks,(queue_t*)task);
+  }
 
   return(tid);
 }
 
 int task_switch (task_t *task){
   #ifdef DEBUG
-    printf("task_switch: trocando contexto %d->%d",runningTask->tid,task->tid);
+    printf("task_switch: trocando contexto %d->%d\n",runningTask->tid,task->tid);
   #endif
   //Salva o contexto atual na struct da tarefa em execução, altera o ponteiro runningTask para a task e restaura o contexto salvo em task
   task_t *taskAux;
@@ -72,17 +86,47 @@ int task_switch (task_t *task){
 }
 
 void task_exit (int exitCode){
-  //Salva o contexto atual na struct da tarefa em execução, altera o ponteiro runningTask para a task Main e restaura o contexto salvo na task Main
+  task_t taskAux;
   #ifdef DEBUG
-    printf("task_exit: tarefa %d sendo encerrada",runningTask->tid);
+    printf("task_exit: tarefa %d sendo encerrada\n",runningTask->tid);
   #endif
-  task_t *taskAux;
-  taskAux = runningTask;
-  runningTask = &taskMain;
-  swapcontext(&(taskAux->contextTask),&(taskMain.contextTask));
+  //Libera as estruturas de dados utilizadas pela tarefa
+  free((runningTask->contextTask).uc_stack.ss_sp);
+
+  //Se for tarefa de usuario retorna para o dispatcher. Se não, retorna para main
+  if((runningTask->tid)>1){
+    runningTask = &taskDispatcher;
+  }
+  else{
+    runningTask = &taskMain;
+  }
+
+  swapcontext(&(taskAux.contextTask),&(runningTask->contextTask));
 }
 
 int task_id (){
   //Retorna o tid da task em execução
   return (runningTask->tid);
+}
+
+void task_yield (){
+  //Se a task em execução for uma tarefa de usuario, coloca na fila de prontas e muda o contexto para o dispatcher
+  if((runningTask->tid)>1){
+    queue_append((queue_t**) &readyTasks,(queue_t*)runningTask);
+  }
+  task_switch(&taskDispatcher);
+}
+
+void dispatcher_body(void* args){
+  task_t *next;
+  while(readyTasks!=NULL){
+    next = scheduler();
+    queue_remove((queue_t**) &readyTasks,(queue_t*) next);
+    task_switch(next);
+  }
+  task_exit(0);
+}
+
+task_t *scheduler(){
+  return(readyTasks);
 }
