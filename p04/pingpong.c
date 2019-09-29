@@ -12,16 +12,6 @@ task_t *readyTasks; //Fila de tarefas prontas
 task_t *runningTask; //Ponteiro para task em execução
 
 
-void dispatcher_body(void* args){
-  task_t *next;
-  while(readyTasks!=NULL){
-    next = scheduler();
-    queue_remove((queue_t**) &readyTasks,(queue_t*) next);
-    task_switch(next);
-  }
-  task_exit(0);
-}
-
 task_t *scheduler(){
   task_t *nextTask, *taskAux;
   int prio;
@@ -40,6 +30,16 @@ task_t *scheduler(){
     (nextTask->prio)++;
   }
   return(nextTask);
+}
+
+void dispatcher_body(void* args){
+  task_t *next;
+  while(readyTasks!=NULL){
+    next = scheduler();
+    queue_remove((queue_t**) &readyTasks,(queue_t*) next);
+    task_switch(next);
+  }
+  task_exit(0);
 }
 
 // Inicializa o sistema operacional; deve ser chamada no inicio do main()

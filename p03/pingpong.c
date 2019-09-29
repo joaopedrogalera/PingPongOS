@@ -11,6 +11,11 @@ task_t taskDispatcher; //task do dispatcher
 task_t *readyTasks; //Fila de tarefas prontas
 task_t *runningTask; //Ponteiro para task em execução
 
+
+task_t *scheduler(){
+  return(readyTasks);
+}
+
 void dispatcher_body(void* args){
   task_t *next;
   while(readyTasks!=NULL){
@@ -21,9 +26,6 @@ void dispatcher_body(void* args){
   task_exit(0);
 }
 
-task_t *scheduler(){
-  return(readyTasks);
-}
 // Inicializa o sistema operacional; deve ser chamada no inicio do main()
 void pingpong_init(){
   setvbuf(stdout, 0, _IONBF, 0);
