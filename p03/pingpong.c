@@ -13,11 +13,13 @@ task_t *runningTask; //Ponteiro para task em execução
 
 
 task_t *scheduler(){
+  //Retorna a primeira tarefa da fila
   return(readyTasks);
 }
 
 void dispatcher_body(void* args){
   task_t *next;
+  //Enquando houverem tarefas na fila, solicita a tarefa ao escalonador, retira da fila e executa
   while(readyTasks!=NULL){
     next = scheduler();
     queue_remove((queue_t**) &readyTasks,(queue_t*) next);
@@ -67,7 +69,7 @@ int task_create (task_t *task, void (*start_func)(void *), void *arg){
 
   makecontext(&(task->contextTask),(void*)(*start_func),1,arg);
 
-  //Soma 1 ao numero de tarefas criado e inicializa variaveis da tarefa
+  //Soma 1 ao numero de tarefas criado e inicializa variaveis da tarefa (ver datatypes.h para detalhes das variaveis)
   tid++;
   task->prev = NULL;
   task->next = NULL;
@@ -101,8 +103,6 @@ void task_exit (int exitCode){
   #ifdef DEBUG
     printf("task_exit: tarefa %d sendo encerrada\n",runningTask->tid);
   #endif
-  //Libera as estruturas de dados utilizadas pela tarefa
-  //free((runningTask->contextTask).uc_stack.ss_sp);
 
   //Se for tarefa de usuario retorna para o dispatcher. Se não, retorna para main
   if((runningTask->tid)>1){

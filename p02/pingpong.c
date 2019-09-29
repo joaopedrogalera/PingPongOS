@@ -46,7 +46,7 @@ int task_create (task_t *task, void (*start_func)(void *), void *arg){
 
   makecontext(&(task->contextTask),(void*)(*start_func),1,arg);
 
-  //Soma 1 ao numero de tarefas criado e inicializa variaveis da tarefa
+  //Soma 1 ao numero de tarefas criado e inicializa variaveis da tarefa (ver datatypes.h para detalhes das variaveis)
   tid++;
   task->prev = NULL;
   task->next = NULL;

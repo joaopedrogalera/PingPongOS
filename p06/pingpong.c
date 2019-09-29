@@ -18,6 +18,7 @@ unsigned int sysTime; //define o tempo do sistema em milisegundos
 
 //Função para tratar interrupções
 void sigTreat(int signum){
+  //Se for uma tarefa de usuario (tid>1), reduz uma unidade do quantum. Ao chegar a 0, retorna ao dispatcher
   if((runningTask->tid)>1){
     (runningTask->timeQuantum)--;
     if((runningTask->timeQuantum)==0){
@@ -34,7 +35,7 @@ task_t *scheduler(){
   nextTask = readyTasks;
   prio = readyTasks->prio;
   taskAux = readyTasks->next;
-
+  //Percorre a fila e escolhe a tarefa de menor valor de prioridade
   while(taskAux!=readyTasks){
     if((taskAux->prio)<prio){
       nextTask=taskAux;
@@ -42,6 +43,7 @@ task_t *scheduler(){
     }
     taskAux=taskAux->next;
   }
+  //Se ainda não atingiu o valor limite (20), aumenta uma unidade
   if(prio<20){
     (nextTask->prio)++;
   }
@@ -51,6 +53,8 @@ task_t *scheduler(){
 //Função executada pela tarefa do dispatcher
 void dispatcher_body(void* args){
   task_t *next;
+
+  //Enquando houverem tarefas na fila, solicita a tarefa ao escalonador, retira da fila e executa
   while(readyTasks!=NULL){
     next = scheduler();
     queue_remove((queue_t**) &readyTasks,(queue_t*) next);
@@ -127,7 +131,7 @@ int task_create (task_t *task, void (*start_func)(void *), void *arg){
 
   makecontext(&(task->contextTask),(void*)(*start_func),1,arg);
 
-  //Soma 1 ao numero de tarefas criado e inicializa variaveis da tarefa
+  //Soma 1 ao numero de tarefas criado e inicializa variaveis da tarefa (ver datatypes.h para detalhes das variaveis)
   tid++;
   task->prev = NULL;
   task->next = NULL;
@@ -158,7 +162,7 @@ int task_switch (task_t *task){
   taskAux = runningTask;
   runningTask = task;
 
-  //Altera os tempos de processador das tarefas
+  //Altera os tempos de processador e ativações das tarefas
   taskAux->processorTime = taskAux->processorTime + (sysTime - taskAux->processorStart);
   runningTask->processorStart = sysTime;
   (runningTask->activations)++;
@@ -171,8 +175,6 @@ void task_exit (int exitCode){
   #ifdef DEBUG
     printf("task_exit: tarefa %d sendo encerrada\n",runningTask->tid);
   #endif
-  //Libera as estruturas de dados utilizadas pela tarefa
-  //free((runningTask->contextTask).uc_stack.ss_sp);
 
   printf("Task %d exit: execution time %d ms, processor time %d ms, %d activations\n",runningTask->tid,sysTime-(runningTask->creationTime),(runningTask->processorTime),(runningTask->activations));
   //Se for tarefa de usuario retorna para o dispatcher. Se não, retorna para main

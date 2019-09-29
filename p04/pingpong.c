@@ -18,7 +18,7 @@ task_t *scheduler(){
   nextTask = readyTasks;
   prio = readyTasks->prio;
   taskAux = readyTasks->next;
-
+  //Percorre a fila e escolhe a tarefa de menor valor de prioridade
   while(taskAux!=readyTasks){
     if((taskAux->prio)<prio){
       nextTask=taskAux;
@@ -26,6 +26,7 @@ task_t *scheduler(){
     }
     taskAux=taskAux->next;
   }
+  //Se ainda não atingiu o valor limite (20), aumenta uma unidade
   if(prio<20){
     (nextTask->prio)++;
   }
@@ -34,6 +35,7 @@ task_t *scheduler(){
 
 void dispatcher_body(void* args){
   task_t *next;
+  //Enquando houverem tarefas na fila, solicita a tarefa ao escalonador, retira da fila e executa
   while(readyTasks!=NULL){
     next = scheduler();
     queue_remove((queue_t**) &readyTasks,(queue_t*) next);
@@ -84,7 +86,7 @@ int task_create (task_t *task, void (*start_func)(void *), void *arg){
 
   makecontext(&(task->contextTask),(void*)(*start_func),1,arg);
 
-  //Soma 1 ao numero de tarefas criado e inicializa variaveis da tarefa
+  //Soma 1 ao numero de tarefas criado e inicializa variaveis da tarefa (ver datatypes.h para detalhes das variaveis)
   tid++;
   task->prev = NULL;
   task->next = NULL;
@@ -119,8 +121,6 @@ void task_exit (int exitCode){
   #ifdef DEBUG
     printf("task_exit: tarefa %d sendo encerrada\n",runningTask->tid);
   #endif
-  //Libera as estruturas de dados utilizadas pela tarefa
-  //free((runningTask->contextTask).uc_stack.ss_sp);
 
   //Se for tarefa de usuario retorna para o dispatcher. Se não, retorna para main
   if((runningTask->tid)>1){
