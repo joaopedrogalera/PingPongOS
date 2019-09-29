@@ -1,8 +1,9 @@
 #include "pingpong.h"
-#include "dispatcher.h"
 #include "queue.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <signal.h>
+#include <sys/time.h>
 
 #define STACKSIZE 32768
 
@@ -11,6 +12,49 @@ task_t taskMain; //Task da tarefa Main
 task_t taskDispatcher; //task do dispatcher
 task_t *readyTasks; //Fila de tarefas prontas
 task_t *runningTask; //Ponteiro para task em execução
+struct sigaction action; // estrutura que define um tratador de sinal
+struct itimerval timer; // estrutura de inicialização do timer
+
+//Função para tratar interrupções
+void sigTreat(int signum){
+  if((runningTask->tid)>1){
+    (runningTask->timeQuantum)--;
+    if((runningTask->timeQuantum)==0){
+      task_yield();
+    }
+  }
+}
+
+task_t *scheduler(){
+  task_t *nextTask, *taskAux;
+  int prio;
+  nextTask = readyTasks;
+  prio = readyTasks->prio;
+  taskAux = readyTasks->next;
+
+  while(taskAux!=readyTasks){
+    if((taskAux->prio)<prio){
+      nextTask=taskAux;
+      prio = taskAux->prio;
+    }
+    taskAux=taskAux->next;
+  }
+  if(prio<20){
+    (nextTask->prio)++;
+  }
+  return(nextTask);
+}
+
+void dispatcher_body(void* args){
+  task_t *next;
+  while(readyTasks!=NULL){
+    next = scheduler();
+    queue_remove((queue_t**) &readyTasks,(queue_t*) next);
+    next->timeQuantum = 20;
+    task_switch(next);
+  }
+  task_exit(0);
+}
 
 // Inicializa o sistema operacional; deve ser chamada no inicio do main()
 void pingpong_init(){
@@ -29,6 +73,26 @@ void pingpong_init(){
 
   //Main em execução
   runningTask = &taskMain;
+
+  //Registra ação para SIGALARM
+  action.sa_handler = sigTreat ;
+  sigemptyset (&action.sa_mask) ;
+  action.sa_flags = 0 ;
+  if (sigaction (SIGALRM, &action, 0) < 0)
+  {
+    perror ("Erro em sigaction: ") ;
+    exit (1) ;
+  }
+
+  timer.it_value.tv_usec = 1000 ;      // primeiro disparo, em micro-segundos
+  timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
+
+  // arma o temporizador ITIMER_REAL
+  if (setitimer (ITIMER_REAL, &timer, 0) < 0)
+  {
+    perror ("Erro em setitimer: ") ;
+    exit (1) ;
+  }
 }
 
 // Cria uma nova tarefa. Retorna um ID> 0 ou erro.
@@ -132,34 +196,4 @@ int task_getprio (task_t *task){
   else{
     return(runningTask->prio);
   }
-}
-
-void dispatcher_body(void* args){
-  task_t *next;
-  while(readyTasks!=NULL){
-    next = scheduler();
-    queue_remove((queue_t**) &readyTasks,(queue_t*) next);
-    task_switch(next);
-  }
-  task_exit(0);
-}
-
-task_t *scheduler(){
-  task_t *nextTask, *taskAux;
-  int prio;
-  nextTask = readyTasks;
-  prio = readyTasks->prio;
-  taskAux = readyTasks->next;
-
-  while(taskAux!=readyTasks){
-    if((taskAux->prio)<prio){
-      nextTask=taskAux;
-      prio = taskAux->prio;
-    }
-    taskAux=taskAux->next;
-  }
-  if(prio<20){
-    (nextTask->prio)++;
-  }
-  return(nextTask);
 }

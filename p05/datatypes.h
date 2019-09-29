@@ -15,6 +15,7 @@ typedef struct task_t
   int tid;
   ucontext_t contextTask;
   int prio;
+  int timeQuantum;
 } task_t ;
 
 // estrutura que define um semáforo
