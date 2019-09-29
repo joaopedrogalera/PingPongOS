@@ -25,6 +25,7 @@ void sigTreat(int signum){
   }
 }
 
+//Escalonador com envelhecimento
 task_t *scheduler(){
   task_t *nextTask, *taskAux;
   int prio;
@@ -45,6 +46,7 @@ task_t *scheduler(){
   return(nextTask);
 }
 
+//Função executada pela tarefa do dispatcher
 void dispatcher_body(void* args){
   task_t *next;
   while(readyTasks!=NULL){
