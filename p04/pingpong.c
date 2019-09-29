@@ -158,7 +158,7 @@ task_t *scheduler(){
     }
     taskAux=taskAux->next;
   }
-  if(prio>-20){
+  if(prio<20){
     (nextTask->prio)++;
   }
   return(nextTask);
