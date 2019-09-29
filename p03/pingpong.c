@@ -1,5 +1,4 @@
 #include "pingpong.h"
-#include "dispatcher.h"
 #include "queue.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,6 +11,19 @@ task_t taskDispatcher; //task do dispatcher
 task_t *readyTasks; //Fila de tarefas prontas
 task_t *runningTask; //Ponteiro para task em execução
 
+void dispatcher_body(void* args){
+  task_t *next;
+  while(readyTasks!=NULL){
+    next = scheduler();
+    queue_remove((queue_t**) &readyTasks,(queue_t*) next);
+    task_switch(next);
+  }
+  task_exit(0);
+}
+
+task_t *scheduler(){
+  return(readyTasks);
+}
 // Inicializa o sistema operacional; deve ser chamada no inicio do main()
 void pingpong_init(){
   setvbuf(stdout, 0, _IONBF, 0);
@@ -112,18 +124,4 @@ void task_yield (){
     queue_append((queue_t**) &readyTasks,(queue_t*)runningTask);
   }
   task_switch(&taskDispatcher);
-}
-
-void dispatcher_body(void* args){
-  task_t *next;
-  while(readyTasks!=NULL){
-    next = scheduler();
-    queue_remove((queue_t**) &readyTasks,(queue_t*) next);
-    task_switch(next);
-  }
-  task_exit(0);
-}
-
-task_t *scheduler(){
-  return(readyTasks);
 }
