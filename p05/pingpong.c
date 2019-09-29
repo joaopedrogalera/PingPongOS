@@ -86,7 +86,7 @@ void pingpong_init(){
     exit (1) ;
   }
 
-  timer.it_value.tv_usec = 1 ;      // primeiro disparo, em micro-segundos
+  timer.it_value.tv_usec = 1000 ;      // primeiro disparo, em micro-segundos
   timer.it_interval.tv_usec = 1000 ;   // disparos subsequentes, em micro-segundos
 
   // arma o temporizador ITIMER_REAL
