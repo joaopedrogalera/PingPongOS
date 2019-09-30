@@ -18,15 +18,20 @@ task_t *scheduler(){
   nextTask = readyTasks;
   prio = readyTasks->prio;
   taskAux = readyTasks->next;
+  if((readyTasks->prio)>-20){
+    (readyTasks->prio)--;
+  }
   //Percorre a fila e escolhe a tarefa de menor valor de prioridade
   while(taskAux!=readyTasks){
     if((taskAux->prio)<prio){
       nextTask=taskAux;
       prio = taskAux->prio;
     }
+    if((taskAux->prio)>-20){
+      (taskAux->prio)--;
+    }
     taskAux=taskAux->next;
   }
-  //Se ainda não atingiu o valor limite (20), aumenta uma unidade
   if(prio<20){
     (nextTask->prio)++;
   }
