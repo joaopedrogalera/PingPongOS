@@ -15,6 +15,7 @@ typedef struct task_t
   int tid;
   ucontext_t contextTask;
   int prio;
+  int staticPrio; //indica a prioridade estatica da tarefa
   int timeQuantum;
 } task_t ;
 

@@ -15,6 +15,7 @@ typedef struct task_t
   int tid;
   ucontext_t contextTask;
   int prio; //indica a prioridade da tarefa
+  int staticPrio; //indica a prioridade estatica da tarefa
   int timeQuantum; //indica o quantum de tempo. Definido pelo dispatcher
   unsigned int creationTime; //Define o momento que a tarefa foi criada
   unsigned int processorTime;  //Define o tempo de processador decorrido

@@ -49,9 +49,7 @@ task_t *scheduler(){
     }
     taskAux=taskAux->next;
   }
-  if(prio<20){
-    (nextTask->prio)++;
-  }
+  nextTask->prio = nextTask->staticPrio;
   return(nextTask);
 }
 
@@ -142,6 +140,7 @@ int task_create (task_t *task, void (*start_func)(void *), void *arg){
   task->next = NULL;
   task->tid = tid;
   task->prio = 0;
+  task->staticPrio = 0;
   task->creationTime = sysTime;
   task->processorTime = 0;
   task->activations = 0;
@@ -209,18 +208,20 @@ void task_yield (){
 void task_setprio (task_t *task, int prio){
   if(task!=NULL){
     task->prio = prio;
+    task->staticPrio = prio;
   }
   else{
     runningTask->prio = prio;
+    runningTask->staticPrio = prio;
   }
 }
 
 int task_getprio (task_t *task){
   if(task!=NULL){
-    return(task->prio);
+    return(task->staticPrio);
   }
   else{
-    return(runningTask->prio);
+    return(runningTask->staticPrio);
   }
 }
 
