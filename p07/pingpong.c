@@ -189,7 +189,6 @@ void task_exit (int exitCode){
     runningTask = &taskDispatcher;
   }
   else{
-  // runningTask = &taskMain;
     exit(0);
   }
 
