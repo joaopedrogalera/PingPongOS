@@ -16,11 +16,12 @@ task_t *sleepingTasks = NULL;
 struct sigaction action; // estrutura que define um tratador de sinal
 struct itimerval timer; // estrutura de inicialização do timer
 unsigned int sysTime; //define o tempo do sistema em milisegundos
+int intEn = 0;
 
 //Função para tratar interrupções
 void sigTreat(int signum){
   //Se for uma tarefa de usuario (tid>1), reduz uma unidade do quantum. Ao chegar a 0, retorna ao dispatcher
-  if((runningTask->tid)!=1){
+  if((runningTask->tid)!=1&&intEn){
     (runningTask->timeQuantum)--;
     if((runningTask->timeQuantum)==0){
       task_yield();
@@ -57,21 +58,20 @@ task_t *scheduler(){
 //Função executada pela tarefa do dispatcher
 void dispatcher_body(void* args){
   task_t *next;
-  task_t *searchAux;
+  task_t *search,*searchAux;
 
   //Enquando houverem tarefas na fila, solicita a tarefa ao escalonador, retira da fila e executa
   while(readyTasks!=NULL||sleepingTasks!=NULL){
     if(sleepingTasks!=NULL){
-      searchAux = sleepingTasks;
+      search = sleepingTasks;
       do{
-        if(systime()>=(searchAux->wakeTime)){
-          printf("%p\n",searchAux);
-          queue_remove((queue_t**) &sleepingTasks,(queue_t*) searchAux);
-          queue_append((queue_t**) &readyTasks,(queue_t*) searchAux);
+        searchAux = search->next;
+        if(systime()>=(search->wakeTime)){
+          queue_append((queue_t**) &readyTasks,queue_remove((queue_t**) &sleepingTasks,(queue_t*) search));
         }
 
-        searchAux = searchAux->next;
-      }while(searchAux!=sleepingTasks);
+        search = searchAux;
+      }while(search!=sleepingTasks&&sleepingTasks!=NULL);
     }
     if(readyTasks!=NULL){
       next = scheduler();
@@ -127,8 +127,8 @@ void pingpong_init(){
     perror ("Erro em setitimer: ") ;
     exit (1) ;
   }
-  queue_append((queue_t**) &readyTasks,(queue_t*)&taskMain);
   sysTime = 0; //isso tem que ser feito antes de entrar no dispatcher
+  intEn = 1;
   task_yield ();
 }
 
@@ -267,7 +267,6 @@ int task_join (task_t *task){
 
 void task_sleep (int t){
   runningTask->wakeTime = systime() + t*1000;
-  printf("%p\n",runningTask);
   queue_append((queue_t**) &sleepingTasks,(queue_t*)runningTask);
   task_switch(&taskDispatcher);
 }
