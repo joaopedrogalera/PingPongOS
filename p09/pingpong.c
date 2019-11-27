@@ -16,7 +16,7 @@ task_t *sleepingTasks = NULL;
 struct sigaction action; // estrutura que define um tratador de sinal
 struct itimerval timer; // estrutura de inicialização do timer
 unsigned int sysTime; //define o tempo do sistema em milisegundos
-int intEn = 0;
+int intEn = 0; //Controla interrupções
 
 //Função para tratar interrupções
 void sigTreat(int signum){
@@ -60,9 +60,10 @@ void dispatcher_body(void* args){
   task_t *next;
   task_t *search,*searchAux;
 
-  //Enquando houverem tarefas na fila, solicita a tarefa ao escalonador, retira da fila e executa
+  //Enquando houverem tarefas nas filas
   while(readyTasks!=NULL||sleepingTasks!=NULL){
     if(sleepingTasks!=NULL){
+      //Percore as tarefas dormindo, verifica as que já podem ser acordadas e as coloca na fila de prontas
       search = sleepingTasks;
       do{
         searchAux = search->next;
@@ -73,6 +74,7 @@ void dispatcher_body(void* args){
         search = searchAux;
       }while(search!=sleepingTasks&&sleepingTasks!=NULL);
     }
+    //Solicita ao scheduler a próxima tarefa, tira da fila e executa
     if(readyTasks!=NULL){
       next = scheduler();
       queue_remove((queue_t**) &readyTasks,(queue_t*) next);
@@ -128,7 +130,7 @@ void pingpong_init(){
     exit (1) ;
   }
   sysTime = 0; //isso tem que ser feito antes de entrar no dispatcher
-  intEn = 1;
+  intEn = 1; //Libera preempção por tempo
   task_yield ();
 }
 
@@ -205,9 +207,9 @@ void task_exit (int exitCode){
 
   printf("Task %d exit: execution time %d ms, processor time %d ms, %d activations\n",runningTask->tid,sysTime-(runningTask->creationTime),(runningTask->processorTime),(runningTask->activations));
   (runningTask->exitCode) = exitCode;
-
+  //Coloca as tarefas que estavam esperando a conclusão da atual na fila de prontas
   while((runningTask->waiting)!=NULL){
-    queue_append((queue_t**) &readyTasks,queue_remove (&(runningTask->waiting), (runningTask->waiting)));
+    queue_append((queue_t**) &readyTasks,queue_remove ((queue_t**) &(runningTask->waiting),(queue_t*) (runningTask->waiting)));
   }
   //Se for tarefa de usuario retorna para o dispatcher. Se não, retorna para main
   if((runningTask->tid)!=1){
@@ -256,9 +258,11 @@ unsigned int systime (){
 }
 
 int task_join (task_t *task){
+  //Se task tiver sido encerrada, retorna -1
   if((task->exitCode)>=0){
     return(-1);
   }
+  //Se task não tiver sido encerrada, coloca a tarefa atual na espera de task
   queue_append((queue_t**) &(task->waiting),(queue_t*)runningTask);
   task_switch(&taskDispatcher);
 
@@ -266,6 +270,7 @@ int task_join (task_t *task){
 }
 
 void task_sleep (int t){
+  //Calcula o tempo de espera e coloca na fila de espera
   runningTask->wakeTime = systime() + t*1000;
   queue_append((queue_t**) &sleepingTasks,(queue_t*)runningTask);
   task_switch(&taskDispatcher);

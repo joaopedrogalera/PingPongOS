@@ -21,10 +21,10 @@ typedef struct task_t
   unsigned int creationTime; //Define o momento que a tarefa foi criada
   unsigned int processorTime;  //Define o tempo de processador decorrido
   unsigned int processorStart; //Define o tempo da ultima entrada em processador
-  int activations;
-  queue_t *waiting;
-  int exitCode;
-  int wakeTime;
+  int activations; //Numero de ativações
+  struct task_t *waiting; //Fila de espera
+  int exitCode; //Código de encerramento
+  int wakeTime; //Hora de acordar
 } task_t ;
 
 // estrutura que define um semáforo
