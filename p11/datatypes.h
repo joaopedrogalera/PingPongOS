@@ -43,7 +43,7 @@ typedef struct
 // estrutura que define uma barreira
 typedef struct
 {
-  int value;
+  int value, status;
   task_t *waiting;
   semaphore_t s;
 } barrier_t ;

@@ -324,6 +324,7 @@ int barrier_create (barrier_t *b, int N){
     return(-1);
   }
   b->value = N;
+  b->status = 0;
   b->waiting = NULL;
   if(sem_create(&(b->s),1)==-1){
     return(-1);
@@ -332,7 +333,7 @@ int barrier_create (barrier_t *b, int N){
 }
 
 int barrier_join (barrier_t *b){
-  if(b==NULL){
+  if(b==NULL||(b->status)==-1){
     return(-1);
   }
   sem_down(&(b->s));
@@ -352,12 +353,12 @@ int barrier_join (barrier_t *b){
 }
 
 int barrier_destroy (barrier_t *b){
-  if(b==NULL){
+  if(b==NULL||(b->status)==-1){
     return(-1);
   }
   while((b->waiting)!=NULL){
     queue_append((queue_t**) &readyTasks,queue_remove((queue_t**) &(b->waiting),(queue_t*) (b->waiting)));
   }
-  b = NULL;
+  b->status = -1;
   return(0);
 }
